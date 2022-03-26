@@ -12,6 +12,11 @@
     <div>
         <label for="s"> Nome: </label>
         <input type="text" id="s" name="nome"/>
+        <?php
+        if (isset($_GET['erro'])){
+            echo "<span style=\"color:red\">*</span>";
+        }
+        ?>
     </div> 
     
     <div>
