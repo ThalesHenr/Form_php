@@ -13,7 +13,7 @@
         <label for="s"> Nome: </label>
         <input type="text" id="s" name="nome"/>
         <?php
-        if (isset($_GET['erro'])){
+        if (isset($_GET['erro']) && $_GET['erro'] == "nome"){
             echo "<span style=\"color:red\">*</span>";
         }
         ?>
@@ -28,9 +28,12 @@
 
     <div>
     <label for="x"> Senha: </label>
-
     <input type="password" id="x"name="senha" /> 
-
+    <?php
+        if (isset($_GET['erro']) && $_GET['erro'] == "senha"){
+            echo "<span style=\"color:red\">*</span>";
+        }
+        ?>
     </div>
     
     <input type="submit" value="Cadastro"/>
